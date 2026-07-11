@@ -1,0 +1,262 @@
+body {
+    font-family: 'Consolas', sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #fcf0bd;
+    color: #f06f6f;
+}
+
+.navbar {
+    background-color: #f06f6f; /* Navbar background color */
+    padding: 15px 0; /* Padding around the navbar */
+    text-align: center; /* Center the text */
+    margin-bottom: 20px; /* Space between navbar and content */
+    box-shadow: 0 4px 8px rgba(233, 0, 0, 0.2); /* Add a subtle shadow */
+    border-radius: 8px; /* Rounded corners */
+    position: fixed; /* Fixed at the top */
+    top: 0; /* Stick to the top of the page */
+    width: 100%; /* Full width of the screen */
+    z-index: 1000; /* Ensure the navbar is on top */ 
+}
+
+.navbar ul {
+    list-style-type: none; /* Remove default list styles */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+}
+
+.navbar li {
+    display: inline; /* Display list items in a line */
+    margin: 0 20px; /* Space between items */
+}
+
+.navbar a {
+    color: white; /* Link text color */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Bold text */
+    transition: color 0.3s, transform 0.3s; /* Transition effect */
+    padding: 8px 15px; /* Add padding for clickable area */
+    border-radius: 5px; /* Rounded corners for links */
+}
+
+.navbar a:hover {
+    color: #ffffff85; /* Change color on hover */
+    background-color: rgba(255, 255, 255, 0.2); /* Subtle background on hover */
+    transform: scale(1.05); /* Slightly enlarge the link on hover */
+}
+
+/* Optional: Active Link Style */
+.navbar a.active {
+    border-bottom: 2px solid #fff; /* Underline for active link */
+}
+
+.heart {
+    height: 70px;
+    width: 70px;
+    background: #f20044;
+    position: relative;
+    transform: rotate(-45deg);
+    margin-top: 150px; /* Adjust this value as needed */
+    margin-bottom: 100px;
+    box-shadow: -10px 10px 90px #f20044;
+    animation: heart 1s linear infinite;
+}
+
+
+@keyframes heart {
+    0% {
+        transform: rotate(-45deg) scale(1.07);
+    }
+    80% {
+        transform: rotate(-45deg) scale(1.0);
+    }
+    100% {
+        transform: rotate(-45deg) scale(0.8);
+    }
+}
+
+.heart:before {
+    content: '';
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    background: #f20044;
+    top: -50%;
+    border-radius: 50px;
+    box-shadow: -10px -10px 90px #f20044;
+}
+
+.heart:after {
+    content: '';
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    background: #f20044;
+    right: -50%;
+    border-radius: 50px;
+    box-shadow: 10px 10px 90px #f20044;
+}
+
+/* Bible verse */
+.verse-text{
+    font-size: 16.4px;
+    font-style:italic;
+    padding-top: 30px;
+    
+}
+.verse{
+    text-align: center;
+    font-style:italic;
+    padding-top: 10px;
+    font-size: 13.4px;
+    color: #ea4c4c;
+}
+
+
+        /*Gallery*/
+        .Gallery {
+            text-align: center;
+            margin-top: 100px;
+            margin-bottom: 30px;
+          }
+          
+        /*.Gallery h2{
+            text-align: center;
+            font-size: 32px;
+            letter-spacing: 1px;
+            color: white;
+            font-weight: bold;
+        }*/
+
+        .Gallery {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 50px 0; /* Margin around the carousel */
+        }
+        
+        #carouselImage{
+            border-radius: 10px; /* Rounded corners for the images */
+            border-style: solid;
+            border-width: 2px;
+            border-color: #ea4c4c ;
+            
+        }
+        .Gallery button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #f06f6f; 
+            color: white; /* Text color for the arrows */
+            border: none; /* Remove border */
+            font-size: 24px; /* Size of the arrow icons */
+            cursor: pointer; /* Pointer cursor on hover */
+            padding: 10px; /* Padding around the buttons */
+            border-radius: 5px; /* Rounded corners for the button */
+            transition: background-color 0.3s; /* Smooth transition for hover effect */
+            z-index: 1; /* Ensure buttons are on top of the video */
+        }
+        
+        .Gallery button:hover {
+            background-color: #ea4c4c; /* Solid background on hover */
+        }
+        
+        .prev {
+            left: -50px; /* Position for the left button */
+        }
+        
+        .next {
+            right: -50px; /* Position for the right button */
+        }
+
+
+/* Timer Section Styling */
+.timer-section {
+    text-align: center;
+    color: white;
+}
+
+.timer-section h2 {
+    font-size: 2.0em;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.timer-section p {
+    font-size: 18px;
+}
+
+.timer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Consolas', sans-serif; /* Retro font */
+    font-size: 2rem;
+    font-weight: 600;
+    color: #fff; /* White text */
+}
+
+.time-unit {
+    margin: 0 15px; /* Space between units */
+    perspective: 1000px; /* Enable 3D perspective */
+}
+
+.flip-card {
+    position: relative;
+    width: 100px; /* Width of each time unit */
+    height: 150px; /* Height of each time unit */
+    background: #fff; /* Background color for the time unit */
+    border-radius: 5px; /* Rounded corners */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #f06f6f; /* Text color */
+    font-size: 4.5rem; /* Font size for the number */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    overflow: hidden; /* Hide overflowing elements */
+}
+
+
+span {
+    font-size: 0.5em; /* Smaller size for labels */
+    color: #f06f6f; /* Lighter color for labels */
+    display: block; /* Block display for labels */
+    margin-top: 10px; /* Space between number and label */
+}
+
+
+/* Timer styles */
+.timer {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.time-unit {
+    text-align: center;
+}
+
+/* Song section */
+.songs-section {
+    margin-top: 70px;
+    text-align: center;
+    color: #f06f6f;
+    padding-bottom: 90px;
+}
+.songs-section h2 {
+    font-size: 2.0em;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.songs-section p {
+    font-size: 18px;
+}
+
+
